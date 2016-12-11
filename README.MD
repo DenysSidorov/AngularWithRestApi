@@ -9,4 +9,4 @@ bower install
 webpack => to bundle application
 npm run server => localhost:8080 live-reload
 
-![Angular with RestAPI (router, animate, auth ) ](https://github.com/AngularWithRestApi/verstAB/raw/master/a1.jpg)
+![Angular with RestAPI (router, animate, auth ) ](https://github.com/DenysSidorov/AngularWithRestApi/raw/master/a1.jpg)
