@@ -1,0 +1,40 @@
+<div class="col-xs-8 col-xs-offset-2">
+<table class="table movietable">
+    <tr>
+        <td><h3>Details for id: <b>{{movie.id}}</b></h3></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Link to Region ID</td>
+        <td>{{movie.region_id}}</td>
+    </tr>
+    <tr>
+        <td>Street Name</td>
+        <td>{{movie.street}}</td>
+    </tr>
+    <tr>
+        <td>House number</td>
+        <td>{{movie.house}}</td>
+    </tr>
+    <tr>
+        <td>Map longitude</td>
+        <td>{{movie.longitude}}</td>
+    </tr>
+    <tr>
+        <td>Map latitude</td>
+        <td>{{movie.latitude}}</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>{{movie.status}}</td>
+    </tr>
+    <tr>
+        <td>Is hour in exploitation</td>
+        <td>{{movie.exploitation}}</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary" ui-sref="editMovie({id:movie.id})">Edit</a>
+    <input type="button" class="btn btn-primary" value="Cancel" ng-click="cancel()"/>
+</div>
+</div>

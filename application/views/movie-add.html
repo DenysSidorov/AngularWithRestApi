@@ -1,0 +1,67 @@
+
+<form name="dataform" class="form-horizontal" role="form" novalidate ng-submit="addMovie()">
+    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Link to Region ID<b class="redd"> *</b></label>
+        <div class="col-sm-10">
+            <input type="text" name="dataform2" required ng-model="movie.region_id" class="form-control" id="title" placeholder="Link to Region ID"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="year" class="col-sm-2 control-label">Street Name<b class="redd"> *</b></label>
+        <div class="col-sm-10">
+            <input type="text" name="dataform3" required ng-model="movie.street" class="form-control" id="year" placeholder="Street Name"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="director" class="col-sm-2 control-label">House number<b class="redd"> *</b></label>
+        <div class="col-sm-10">
+            <input type="text"  name="dataform4" required ng-model="movie.house" class="form-control" id="director" placeholder="House number"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="plot" class="col-sm-2 control-label">Map longitude<b class="redd"> *</b></label>
+        <div class="col-sm-10">
+            <input type="text" name="dataform5"required ng-model="movie.longitude" class="form-control" id="plot" placeholder="Map longitude"/>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="map2" class="col-sm-2 control-label">Map latitude<b class="redd"> *</b></label>
+        <div class="col-sm-10">
+            <input type="text" name="dataform6" required ng-model="movie.latitude" class="form-control" id="map2" placeholder="Map latitude"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="sta" class="col-sm-2 control-label">Status</label>
+        <div class="col-sm-10">
+            <input type="text" ng-model="movie.status" class="form-control" id="sta" placeholder="Status"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="hour" class="col-sm-2 control-label">Is hour in exploitation</label>
+        <div class="col-sm-10">
+            <input type="text" ng-model="movie.exploitation" class="form-control" id="hour" placeholder="Is hour in exploitation"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" class="btn btn-primary" value="Save"/>
+            <input type="button" class="btn btn-primary" value="Cancel" ng-click="cancel()"/>
+        </div>
+    </div>
+
+    <!--<div ng-include="'partials/_form.html'"></div>-->
+</form>
+<div class="row">
+    <button class="col-lg-offset-8" id="pop-up-btn" ng-click="openPopUp()"></button>
+    <div id="pop-up">
+        <div class="content-wrap">
+            <div class="icon-close" ng-click="closePopUp()">Close</div>
+            <div class="textValid">{{statusMessage}}</div>
+        </div>
+    </div>
+    <div id="pop-up-bg"></div>
+</div>

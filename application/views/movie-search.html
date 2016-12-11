@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-5">
+        <div class="input-group">
+            <input ng-model-options="{ debounce: 600 }" ng-model="filterWord" type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+        <button  class="btn btn-default" type="button">Go!</button>
+      </span>
+        </div>
+    </div>
+</div>
+
+<!--<a ui-sref="newMovie" class="btn-primary btn-lg nodecoration">Add new Item</a>-->
+<!--<div class="row"></div>-->
+<!--<input type="text" value="{{movies}}">-->
+<table class="table movietable padd table-hover">
+    <tr>
+        <td>Id</td>
+        <td>Region Id</td>
+        <td>Street</td>
+        <td>House</td>
+        <td>Longitude</td>
+        <td>Latitude</td>
+        <td>Status</td>
+        <td>Exploitation</td>
+        <td>OPERATIONS</td>
+    </tr>
+    <!--<tr ng-repeat="movie in movies | limitTo : 5">-->
+    <tr ng-repeat="movie in movies | filter: filterWord">
+        <td>{{movie.id}}</td>
+        <td>{{movie.region_id}}</td>
+        <td>{{movie.street}}</td>
+        <td>{{movie.house}}</td>
+        <td>{{movie.longitude}}</td>
+        <td>{{movie.latitude}}</td>
+        <td>{{movie.status}}</td>
+        <td>{{movie.exploitation}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewMovie({id:movie.id})">View</a>
+            <a class="btn btn-danger"  ui-sref="deleteMovie({id:movie.id})">Delete</a>
+        </td>
+    </tr>
+</table>
+
+<!--<nav aria-label="...">-->
+    <!--&lt;!&ndash;<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;&laquo; - html code prev&ndash;&gt;-->
+    <!--&lt;!&ndash;&raquo; - html code end &ndash;&gt;-->
+    <!--<ul class="pagination" >-->
+        <!--<li><a ui-sref="search({page:1})" aria-label="Previous"><span aria-hidden="true">begin</span></a></li>-->
+        <!--<li   ng-repeat="item in getNumber(countPage)" >-->
+            <!--<a  ng-class="{activeHref: $index+1==activClass}" ui-sref="search({page:$index+1})" href="" >{{$index+1 }}<span class="sr-only">(current)</span></a>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a ui-sref="search({page:countPage})" href="" aria-label="Next">-->
+                <!--<span aria-hidden="true">end</span>-->
+            <!--</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</nav>-->
